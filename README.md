@@ -87,7 +87,6 @@ const a = "car";
 console.log(`The variable "a" contains ${a}`);
 ```
 
-## Conditionals and Loops
 ## Arrays, Objects and Functions
 ## Error Handling
 ## Functional Programming

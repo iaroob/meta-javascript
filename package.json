@@ -1,0 +1,19 @@
+{
+  "name": "meta-javascript",
+  "version": "1.0.0",
+  "description": "This repository contains the notes I've taken following the \"Programming with JavaScript\" course, from the \"Meta Front-End Developer Professional Certificate\" on [Coursera](https://www.coursera.org/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iaroob/meta-javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iaroob/meta-javascript/issues"
+  },
+  "homepage": "https://github.com/iaroob/meta-javascript#readme"
+}

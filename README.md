@@ -10,6 +10,9 @@ Different ways of declaring variables:
 - let: not redeclarable, block scoped, doesn't create global property and reassignable
 - const: not redeclarable, block scoped, doesn't create global property and not reassignable
 
+##### TypeOf
+The TypeOf operator checks the data types (examples in week-2 folder)
+
 ### Data types
 - String: can be assigned using single ``` ' ' ```, double ``` " " ``` quotes or backticks ``` ` ` ```
 - Number
@@ -88,6 +91,85 @@ console.log(`The variable "a" contains ${a}`);
 ```
 
 ## Arrays, Objects and Functions
+### Functions
+```JS
+function addTwoNums(a, b) {  // parameters
+  return a + b;
+}
+
+console.log(addTwoNums(5, 2));  // arguments
+```
+**Function parameters**: variables that we pass to the function when it's defined
+**Function arguments**: values that we pass to the function when it's called
+
+### Objects and Dot Notation
+Objects can be built by using the object literal syntax, by specifying the object's properties, delimited as key-value pairs.
+```JS
+var user = {
+  name: "Aroob",
+  age: 22,
+  color: "blue"
+}
+```
+To access an individual property, the dot notation does the task as the following code shows:
+```JS
+console.log(user.name);
+```
+An alternative approach of building objects is to first save an empty object literal to a variable, then use the dot notation to declare new properties on the fly, and use the assignment operator to add values to those properties. You can also add a new key-value pair to an existing object or modify it.
+```JS
+var user = {}
+user.name = "Aroob";
+user.age = 22;
+user.color = "blue";
+```
+### Objects and Brackets Notation
+Instead of using 'dots', brackets can do the same thing as well.
+```JS
+var user = {}
+user['name'] = "Aroob";
+user['age'] = 22;
+user['color'] = "blue";
+```
+**Note**: Using the brackets notation, it's essential to wrap each property's key as a string, inside either the single or double quotes - just like with regular strings. 
+
+### Arrays - Objects
+In JavaScript, arrays are objects. That means that arrays also have some built-in properties and methods.
+The most used ones are:
+- push(): add new items to an array
+- pop(): remove the last item from an array
+
+```JS
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    return arr;
+}
+
+const fruits = arrayBuilder('apple', 'orange', 'pear');
+```
+### Strings - methods
+Strings have similar behavior to arrays. Some common String methods are:
+- charAt(): read each individual character at a specific index in a string
+- concat(): joins two strings
+- indexOf(): returns the location of the first position that matches a character
+- lastIndexOf(): finds the last match
+- split(): chops up the string into an array of sub-strings
+- toUpperCase(), toLowerCase()
+
+### Methods inside Objects
+Object properties can take many data types, including functions. If the function is a property of an object, it is then referred to as a **method**.
+```JS
+var car = {};
+car.color = "red";
+car.turnTheKey = function() {
+    console.log("The engine is running");
+}
+
+car.turnTheKey();   // The engine is running
+```
+
 ## Error Handling
 ## Functional Programming
 ## Object-Oriented Programming (OOP)

@@ -203,6 +203,17 @@ Defensive programming means assuming that all the arguments a function will rece
 It's about thinking about such scenarios before they happen, so as to make your function less likely to cause errors because of faulty inputs.
 
 ## Functional Programming
+It has clear distinction between data and functions. Data can exist outside of functions (passing data in form of arguments). The next example shows how functional programming works:
+
+```JS
+var shoes = 100;
+var stateTax = 1.1; 
+function totalPrice(price, tax) {
+  return price * tax;
+}
+var toPay = totalPrice(shoes, stateTax);
+console.log(toPay);
+```
 ## Object-Oriented Programming (OOP)
 ## Advanced JavaScript features
 ## JavaScript in the Browser

@@ -171,6 +171,37 @@ car.turnTheKey();   // The engine is running
 ```
 
 ## Error Handling
+### try - catch
+If a piece of code throws an error, it can get wrapped inside a try block. Then you can catch the error with the catch block, and use it to do something. For example, output the error message to the console.
+
+### throw keyword
+Using the throw keyword, you can force an error to be thrown from the try block to the catch block.
+
+```JS
+try {
+  throw new Error();
+  
+} catch(err) {
+  console.log(err);
+}
+```
+
+Most common errors:
+- **ReferenceError**: gets thrown when, for example, one tries to use variables that haven't been declared anywhere.
+- **SyntaxError**: Any kind of invalid JavaScript code will cause this error and it cannot be caught using the try-catch block.
+- **TypeError**: is thrown when, for example, trying to run a method on a non-supported data type.
+- **RangeError**: is thrown when we're giving a value to a function, but that value is out of the allowed range of acceptable input values.
+
+### Undefined, null and empty values
+- **Null**: represents intentional absence of object value or the return value of some built-in JS methods.
+- **Undefined**: when a variable is declared without assignment, when trying to access an object property that doesn't exist.
+- **Empty strings**: string without any characters inside.
+
+### Defensive programming
+Defensive programming means assuming that all the arguments a function will receive are of the wrong type, the wrong value or both.
+
+It's about thinking about such scenarios before they happen, so as to make your function less likely to cause errors because of faulty inputs.
+
 ## Functional Programming
 ## Object-Oriented Programming (OOP)
 ## Advanced JavaScript features

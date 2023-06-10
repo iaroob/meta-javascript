@@ -300,6 +300,10 @@ ringTheBell(bicycle); // Ring, ring! Watch out, please!
 ```
 
 ## Advanced JavaScript features
+### For of loops and objects
+Important: for of loop cannot work on an object directly, since an object is not iterable. Arrays are iterable.
+
+There are built-in methods that create arrays to loop over objects: **Object.keys()**, **Object.values()** and **Object.entries()**.
 ## JavaScript in the Browser
 ## Node.js and NPM
 ## Testing

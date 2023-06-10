@@ -214,7 +214,91 @@ function totalPrice(price, tax) {
 var toPay = totalPrice(shoes, stateTax);
 console.log(toPay);
 ```
+
+### Global scope VS Local scope
+The code that exists outside of a function is referred to as global scope, and all the code inside of a function is known as local scope or function scope. 
+
+```JS
+var num1 = 100; // Global scope
+function score() {
+  var num2 = 20;  // Local scope
+}
+```
 ## Object-Oriented Programming (OOP)
+OOP revolves around the idea of organizing our programs using objects to group related data and functionality.
+With the OOP approach, you create an object and store all data related to that object including variables, functions and output statements.
+
+```JS
+var purchase 1 = {      // creating an object
+  shoes: 100,
+  stateTax: 1.2,
+  totalPrice: function() {
+    var calculation = this.shoes * this.stateTax;
+    console.log('Total price: ', calculation);
+  }
+}
+
+purchase1.totalPrice();     // invoke method
+```
+### Classes
+Classes are essentially a blueprint that you can repeatedly use to build new objects of a certain kind.
+
+```JS
+Class purchase {
+  constructor(shoes, stateTax) {
+    this.shoes = shoes;
+    this.stateTax = stateTax;
+  }
+  
+  totalPrice() {
+    var calculation = this.shoes * this.stateTax;
+    console.log('Total price: ', calculation);
+  }
+}
+
+const purchase1 = new Purchase(100, 1.2);   // creating instance of class
+purchase1.totalPrice();                     // invoke method
+```
+### OOP Principles: Inheritance
+It is used for creating sub-classes of a base class and it gives them properties of this base class (known as super-class).
+
+```JS
+Class Animal {/* ..... */}
+Class Bird extends Animal {/* ..... */}
+Class Eagle extends Bird {/* ..... */}
+```
+### OOP Principles: Encapsulation
+Encapsulation has to do with making a code implementation "hidden" from other users, in the sense that they don't have to know how my code works in order to "consume" the code.
+Encapsulation is about you not having access to, or not being concerned with, how some implementation works internally.
+
+```JS
+"abc".toUpperCase();    // for example, I don't have to worry about how this method works, I just want to use it in my code
+```
+
+### OOP Principles: Abstraction
+Abstraction is all about writing code in a way that will make it more generalized. An abstraction is about extracting the concept of what you're trying to do, rather than dealing with a specific manifestation of that concept. 
+
+### OOP Principles: Polymorphism
+It means giving the same name of the method to different objects/classes, based on what object it is used for.
+
+```JS
+const bicycle = {
+    bell: function() {
+        return "Ring, ring! Watch out, please!"
+    }
+}
+const door = {
+    bell: function() {
+        return "Ring, ring! Come here, please!"
+    }
+}
+
+function ringTheBell(thing) {
+    console.log(thing.bell())
+}
+ringTheBell(bicycle); // Ring, ring! Watch out, please!
+```
+
 ## Advanced JavaScript features
 ## JavaScript in the Browser
 ## Node.js and NPM

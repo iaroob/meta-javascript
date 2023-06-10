@@ -305,5 +305,45 @@ Important: for of loop cannot work on an object directly, since an object is not
 
 There are built-in methods that create arrays to loop over objects: **Object.keys()**, **Object.values()** and **Object.entries()**.
 ## JavaScript in the Browser
-## Node.js and NPM
+### DOM Manipulation
+DOM (Document Object Model) manipulation involves interacting with the HTML elements and modifying their properties, content, structure, or appearance dynamically using JavaScript.
+#### Selecting elements: 
+- getElementById()
+- querySelector()
+- getElementsByClassName()
+- getElementByTagName()
+#### Modifying Content:
+- innerHTML
+- textContent
+- innerText
+- createTextNode()
+#### Modifying attributes and properties:
+- getAttribute()
+- setAttribute()
+- classList
+- style
+#### Creating and appending elements:
+- createElement()
+- appendChild()
+- insertBefore()
+#### Event handling:
+- addEventListener()
+- removeEventListener()
+
 ## Testing
+```JS
+// sum.js
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+
+// sum.test.js
+const sum = require('./sum');
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+test('adds -5 + 7 to equal 2', () => {
+  expect(sum(-5, 7)).toBe(2);
+});
+```
